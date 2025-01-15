@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Affiliate Blocker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f7fb;
+        width: 250px;
+      }
+      h1 {
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      label {
+        font-size: 14px;
+        color: #555;
+      }
+      select {
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .status-message {
+        font-size: 14px;
+        color: #333;
+        margin-top: 10px;
+      }
+      .message_text{
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Affiliate Blocker</h1>
+    <div class="container">
+        <div class="message_text">Affiliate blocker is working</div>
+      <label for="disableDuration">Set the duration to disable:</label>
+      <select id="disableDuration">
+        <option value="0.5">30 second</option>
+        <option value="1">1 Minute</option>
+        <option value="10">10 Minutes</option>
+        <option value="30">30 Minutes</option>
+      </select>
+      <button id="disableBtn">Disable</button>
+      <div id="status" class="status-message"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
